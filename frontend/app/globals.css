@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer components{
+  .flexCol{
+      @apply flex flex-col
+  }
+
+  .flexRow{
+      @apply flex flex-row
+  }
+
+  .flexRowCenter{
+      @apply flex flex-row justify-center items-center
+  }
+
+  .flexColCenter{
+      @apply flex flex-col justify-center items-center
+  }
+
+  .bg-gradient-pink {
+    /* background: radial-gradient(circle, rgb(176, 21, 27), rgb(243, 92, 168), rgb(176, 21, 27) ); */
+    background: radial-gradient(circle, rgb(231, 119, 28), rgb(236, 70, 70), rgb(176, 21, 27) );
+    /* Adjust the colors and sizes as needed */
+  }
+
+  .bg-gradient-green {
+    /* background: radial-gradient(circle, rgb(176, 21, 27), rgb(243, 92, 168), rgb(176, 21, 27) ); */
+    background: radial-gradient(circle, white, #39ff14, rgb(7, 237, 129) );
+    /* Adjust the colors and sizes as needed */
+  }
+    
+}
